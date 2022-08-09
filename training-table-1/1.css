@@ -1,0 +1,28 @@
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th {
+  background-color: lightblue;
+}
+
+.namecell {
+  background-color: orange;
+}
+
+td {
+  background-color: rgb(72, 183, 72);
+}
+
+.incomplete {
+  background-color: rgb(214, 32, 32);
+}
+
+td:nth-child(2).Non {
+  background-color: pink;
+}
+td:nth-child(2) {
+  background-color: yellow;
+}
