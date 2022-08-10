@@ -1,0 +1,46 @@
+td,
+table,
+th {
+  border: 1px solid rgb(145, 145, 145);
+  border-spacing: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  text-align: center;
+}
+table {
+  width: 100%;
+  border: 0px;
+}
+th {
+  background-color: rgba(211, 211, 211, 0.592);
+}
+.link {
+  color: blue;
+  text-decoration: underline;
+}
+
+tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+/* .customborder {
+  border: 5px solid black !important;
+  background-color: red;
+} */
+
+.planet {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.top {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.bot {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
