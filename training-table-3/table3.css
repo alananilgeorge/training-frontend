@@ -1,0 +1,27 @@
+th,
+table,
+tr,
+td {
+  border: 1px solid rgb(99, 99, 99);
+  background-color: black;
+}
+th,
+td {
+  padding-left: 5px;
+}
+table {
+  text-align: left;
+  border-spacing: 0px;
+  width: 100%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cap {
+  background-color: black;
+  color: white;
+}
+
+th {
+  background-color: gray;
+}
