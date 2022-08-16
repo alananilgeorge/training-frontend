@@ -1,0 +1,28 @@
+.maingrid {
+  display: grid;
+  grid-gap: 10px;
+  height: 500px;
+}
+.red {
+  background-color: red;
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  .maingrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .maingrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .maingrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
