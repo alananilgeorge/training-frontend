@@ -1,3 +1,19 @@
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+.btn {
+  color: #f1356d;
+  background-color: transparent;
+}
+a:hover {
+  cursor: pointer;
+}
+.blog-li:hover {
+  cursor: pointer;
+}
+.blog-li {
+  border-bottom: 1px solid #d5d0d0;
+}
 .navbar {
   align-items: center;
   display: flex;
@@ -8,13 +24,16 @@
 .navbar > li {
   padding: 5px;
 }
-
+li {
+  padding-bottom: 5px;
+  border-bottom: 1px #d3d3d3;
+}
 .wrapper {
-  font-family: "Courier New", Courier, monospace;
-  color: #f1356d;
   text-align: center;
+  color: #f1356d;
   margin-left: 20%;
   margin-right: 20%;
+  font-family: "Courier New", Courier, monospace;
 }
 .header-wrap {
   align-items: center;
@@ -39,7 +58,9 @@ select,
 textarea {
   width: 100%;
 }
-
+.edit {
+  display: none;
+}
 input,
 textarea {
   padding: 0;
@@ -47,12 +68,27 @@ textarea {
   box-sizing: border-box;
 }
 
-.form-wrap {
-  padding-left: 30%;
-  padding-right: 30%;
+.content {
+  padding-left: 20%;
+  padding-right: 20%;
   justify-content: center;
+  display: none;
 }
-
+#home {
+  text-align: left;
+  display: block;
+}
+#blog-list {
+  overflow-y: scroll;
+  height: 60vh;
+}
+h2 {
+  color: #000000;
+}
+ul {
+  list-style-type: none;
+  text-align: left;
+}
 .pink-button {
   background-color: #f1356d;
   border: 2px solid #f1356d;
@@ -61,9 +97,25 @@ textarea {
   size: 20px;
   border: 0px;
   height: 30px;
+  padding: 1px 6px 1px 6px;
 }
 
 .form-inside {
   color: #000000;
   text-align: left;
+}
+.blog-name:hover {
+  cursor: pointer;
+}
+
+.add-comments {
+  color: #f1356d;
+
+  font-size: 12px;
+  margin: 0;
+}
+
+.add-comments:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

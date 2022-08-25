@@ -4,6 +4,10 @@
     <title>Wrike</title>
     <meta charset="UTF-8" />
     <meta content="width=device-width initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/styles/task.css" />
   </head>
   <body>
@@ -12,27 +16,29 @@
         <div class="header-wrap">
           <div class="left-header">
             <nav>
-              <a href="#">&#9776;</a>
-              <a href="#">&#9993;</a>
-              <a href="#" class="home">&#8962;</a>
+              <a href="#"><span class="material-icons btn"> menu </span></a>
+              <a href="#"><span class="material-icons btn"> mail </span></a>
+              <a href="#"><span class="material-icons btn"> home </span></a>
             </nav>
           </div>
           <input
-            class="small-search"
+            class="material-icons small-search btn"
             type="text"
             name="search"
-            placeholder="&#128269;"
+            placeholder="search"
           />
           <div class="right-header">
             <input
-              class="large-search"
+              class="material-icons large-search btn"
               type="text"
               name="search"
-              placeholder="&#128269; search"
+              placeholder="search"
             />
 
-            <a href="#">&#8853;</a>
-            <a href="#">&#63;</a>
+            <a href="#"
+              ><span class="material-icons btn"> add_circle_outline </span></a
+            >
+            <a href="#"><span class="material-icons btn"> help </span></a>
           </div>
         </div>
       </header>
@@ -41,76 +47,137 @@
           <div class="sidebar">
             <ul class="sidebar-list">
               <li>
-                <a href="/Tools"><span class="arrow">&#707;</span> Tools</a>
+                <a href="/Tools">Tools</a>
               </li>
               <li>
-                <a href="/projects-tools"
-                  ><span class="arrow">&#707;</span> Projects and Folders</a
-                >
+                <a href="/projects-tools">Projects and Folders</a>
               </li>
               <li>
-                <a href="/Engineering"
-                  ><span class="arrow">&#707;</span> Engineering</a
-                >
+                <a href="/Engineering">Engineering</a>
               </li>
               <li>
-                <a href="/foundational"
-                  ><span class="arrow">&#707;</span> Foundational</a
-                >
+                <a href="/foundational">Foundational</a>
               </li>
               <li>
                 <a href="/goal-based"> Goal based</a>
               </li>
               <li>
-                <a href="/requests"
-                  ><span class="arrow">&#707;</span> Requests</a
-                >
+                <a href="/requests">Requests</a>
               </li>
+              <li>content1</li>
+              <li>content2</li>
+              <li>content3</li>
+              <li>content4</li>
+              <li>content5</li>
+              <li>content6</li>
+              <li>content7</li>
+              <li>content8</li>
+              <li>content1</li>
+              <li>content2</li>
+              <li>content3</li>
+              <li>content4</li>
+              <li>content5</li>
+              <li>content6</li>
+              <li>content7</li>
+              <li>content8</li>
+              <li>content1</li>
+              <li>content2</li>
+              <li>content3</li>
+              <li>content1</li>
+              <li>content2</li>
+              <li>content3</li>
+              <li>content4</li>
+              <li>content5</li>
+              <li>content6</li>
+              <li>content7</li>
+              <li>content8</li>
+              <li>content1</li>
+              <li>content2</li>
+              <li>content3</li>
+              <li>content4</li>
+              <li>content5</li>
+              <li>content6</li>
+              <li>content7</li>
+              <li>content8</li>
+              <li>content1</li>
+              <li>content2</li>
+              <li>content3</li>
             </ul>
           </div>
           <div class="taskview">
-            <div class="subheader">
-              <div><h3>UX-UI Rewamp</h3></div>
-              <div>
-                <a href="">Share</a>
-                <a href="">&#128448;</a>
-                <a href=""><span class="dot">&#183;&#183;&#183;</span></a>
+            <div class="task-view-header">
+              <div class="subheader">
+                <div><h3>UX-UI Rewamp</h3></div>
+                <div>
+                  <a href="">Share</a>
+                  <a href="">&#128448;</a>
+                  <a href=""><span class="dot">&#183;&#183;&#183;</span></a>
+                </div>
               </div>
-            </div>
-            <div class="set-view-tab">
-              <button class="button">
-                List <span class="dot">&#183;&#183;&#183;</span>
-              </button>
-              <button class="button">Board</button>
-              <button class="button">&#43;</button>
-            </div>
-            <div class="set-sort">
-              <div>
-                <span class="arrow">&#709;</span>
-                <select name="by-task" id="by-task">
-                  <option value="0">All tasks</option>
-                  <option value="2">Select date</option>
-                </select>
-                <select name="by-status" id="by-status">
-                  <option value="0">By Status</option>
-                  <option value="2">Completed</option>
-                  <option value="3">Incomplete</option>
-                </select>
+              <div class="set-view-tab">
+                <button class="button">
+                  <span class="material-icons"> list </span> List
+                  <span class="material-icons"> more_horiz </span>
+                </button>
+                <button class="button">Board</button>
+                <button class="button">&#43;</button>
               </div>
-              <div>
-                <a href=""><span class="dot">&#183;&#183;&#183;</span></a>
+              <div class="set-sort">
+                <div class="filter-sub-div">
+                  <span class="material-icons"> filter_alt </span>
+                  <select name="by-task" id="by-task">
+                    <option value="0">All tasks</option>
+                    <option value="2">Select date</option>
+                  </select>
+                  <select name="by-status" id="by-status">
+                    <option value="0">By Status</option>
+                    <option value="2">Completed</option>
+                    <option value="3">Incomplete</option>
+                  </select>
+                </div>
+                <div>
+                  <a href=""
+                    ><span class="material-icons"> more_horiz </span></a
+                  >
+                </div>
               </div>
-            </div>
-            <div class="add-item">
-              <div>&#43;</div>
-              <div>Item</div>
-            </div>
-            <div class="caption">
-              The "Show Tasks from subfolders" option is enabled.
-              <span class="link">Turn it off to see Folders and projects</span>
+              <div class="add-item">
+                <div><span class="material-icons"> add_circle </span></div>
+                <div>Item</div>
+              </div>
+              <div class="caption">
+                The "Show Tasks from subfolders" option is enabled.
+                <span class="link"
+                  >Turn it off to see Folders and projects</span
+                >
+              </div>
             </div>
             <div class="list-view">
               <ul class="main-list">
+                <li>content1</li>
+                <li>content2</li>
+                <li>content3</li>
+                <li>content4</li>
+                <li>content5</li>
+                <li>content6</li>
+                <li>content7</li>
+                <li>content8</li>
+                <li>content1</li>
+                <li>content2</li>
+                <li>content3</li>
+                <li>content4</li>
+                <li>content5</li>
+                <li>content6</li>
+                <li>content7</li>
+                <li>content8</li>
+                <li>content1</li>
+                <li>content2</li>
+                <li>content3</li>
+                <li>content4</li>
+                <li>content5</li>
+                <li>content6</li>
+                <li>content7</li>
+                <li>content8</li>
                 <li>content1</li>
                 <li>content2</li>
                 <li>content3</li>

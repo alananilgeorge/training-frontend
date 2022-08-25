@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Blog Page</title>
     <link rel="stylesheet" href="./assets/styles/create.css" />
+    <script src="./assets/scripts/create.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -13,34 +16,113 @@
             <nav>
               <ul class="navbar">
                 <li>
-                  <a href="">Home</a>
+                  <a class="pink-button" id="home-button" onclick="clickHome()"
+                    >Home</a
+                  >
                 </li>
                 <li>
-                  <button class="pink-button">New Blog</button>
+                  <a class="btn" id="add-button" onclick="clickAdd()">
+                    New Blog
+                  </a>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
       </header>
-      <div class="form-wrap">
-        <form action="">
+      <div class="content createpage" id="create">
+        <form action="#" id="form-blog">
           <h1>Add new blog</h1>
           <div class="form-inside">
-            <label for="title">Form Title: </label>
-            <input type="text" id="body" name="blog-title" />
+            <label for="title">Blog Title: </label>
+            <input type="text" id="title" name="blog-title" />
             <label for="body">Blog body:</label>
-            <textarea name="blog-body" id="body" cols="30" rows="10"></textarea>
+            <textarea
+              name="blog-body"
+              id="blog-body"
+              cols="30"
+              rows="10"
+            ></textarea>
             <label for="author">Blog Author:</label>
-            <select name="blog-author" id="body">
-              <option value="rahul">Rahul</option>
+            <select name="blog-author" id="author-name">
+              <option value="rohan">Rohan</option>
               <option value="cinta">Cinta</option>
-              <option value="Afthab">Afthab</option>
+              <option value="afthab">Afthab</option>
+              <option value="damey">Damey</option>
+              <option value="jithin">Jithin</option>
             </select>
           </div>
           <br />
-          <button class="pink-button">Add blog</button>
+          <button type="submit" class="pink-button" onclick="confirmDialog()">
+            Add blog
+          </button>
+          <p id="text"></p>
         </form>
+      </div>
+      <div class="content home" id="home">
+        <h2>All Blogs</h2>
+
+        <ul id="blog-list">
+          <li>content1</li>
+          <li>content2</li>
+          <li>content3</li>
+          <li>content4</li>
+          <li>content5</li>
+          <li>content6</li>
+          <li>content7</li>
+          <li>content8</li>
+          <li>content1</li>
+          <li>content2</li>
+          <li>content3</li>
+          <li>content4</li>
+          <li>content5</li>
+          <li>content6</li>
+          <li>content7</li>
+          <li>content8</li>
+          <li>content1</li>
+          <li>content2</li>
+          <li>content3</li>
+          <li>content4</li>
+          <li>content5</li>
+          <li>content6</li>
+          <li>content7</li>
+          <li>content8</li>
+          <li>content1</li>
+          <li>content2</li>
+          <li>content3</li>
+          <li>content4</li>
+          <li>content5</li>
+          <li>content6</li>
+          <li>content7</li>
+        </ul>
+      </div>
+      <div class="content editpage" id="edit">
+        <form action="#" id="edit-blog">
+          <h1>Edit blog</h1>
+          <div class="form-inside">
+            <label for="title">New blog title: </label>
+            <input type="text" id="new-title" name="new-blog-title" />
+            <label for="body">New blog body:</label>
+            <textarea
+              name="new-blog-body"
+              id="new-blog-body"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <label for="author">Blog Author:</label>
+            <select name="new-blog-author" id="new-author-name">
+              <option value="rohan">Rohan</option>
+              <option value="cinta">Cinta</option>
+              <option value="afthab">Afthab</option>
+              <option value="damey">Damey</option>
+              <option value="jithin">Jithin</option>
+            </select>
+          </div>
+          <br />
+          <button type="submit" class="pink-button">Confirm changes!</button>
+          <p id="text"></p>
+        </form>
+        <button class="pink-button" id="delete-blog">Delete blog!</button>
       </div>
     </div>
   </body>
