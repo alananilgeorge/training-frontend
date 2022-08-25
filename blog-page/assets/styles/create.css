@@ -1,6 +1,18 @@
-.scroll::-webkit-scrollbar-thumb {
+#blog-list::-webkit-scrollbar {
+  width: 7px;
+}
+#blog-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#blog-list::-webkit-scrollbar-thumb {
+  background-color: #ef57856c;
   border-radius: 10px;
 }
+#blog-list::-webkit-scrollbar-thumb:hover {
+  background-color: #ef5785;
+  border-radius: 10px;
+}
+
 .btn {
   color: #f1356d;
   background-color: transparent;
