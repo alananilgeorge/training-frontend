@@ -1,39 +1,34 @@
 let selected = "";
 let liCount = 1;
+var createVar = document.getElementById("create");
+var homeVar = document.getElementById("home");
+var home_btn = document.getElementById("home-button");
+var add_btn = document.getElementById("add-button");
 
-function clickAdd() {
-  document.getElementById("create").style.display = "block";
-  document.getElementById("home").style.display = "none";
-  document.getElementById("add-button").classList.add("pink-button");
-  document.getElementById("home-button").classList.remove("pink-button");
-  document.getElementById("edit").style.display = "none";
-  document.getElementById("title").value = "";
-  document.getElementById("author-name").value = "";
-}
-
-function clickHome() {
-  document.getElementById("create").style.display = "none";
-  document.getElementById("home").style.display = "block";
-  document.getElementById("home-button").classList.add("pink-button");
-  document.getElementById("add-button").classList.remove("pink-button");
-  document.getElementById("edit").style.display = "none";
+function clickNav(btn) {
+  console.log(btn);
+  btn.classList.add("pink-button");
+  if (btn.id == "add-button") {
+    createVar.style.display = "block";
+    homeVar.style.display = "none";
+    home_btn.classList.remove("pink-button");
+    document.getElementById("edit").style.display = "none";
+  } else {
+    createVar.style.display = "none";
+    homeVar.style.display = "block";
+    add_btn.classList.remove("pink-button");
+    document.getElementById("edit").style.display = "none";
+  }
 }
 
 function clickEdit() {
-  document.getElementById("create").style.display = "none";
-  document.getElementById("home").style.display = "none";
-  document.getElementById("add-button").classList.remove("pink-button");
-  document.getElementById("home-button").classList.remove("pink-button");
+  createVar.style.display = "none";
+  homeVar.style.display = "none";
+  add_btn.classList.remove("pink-button");
+  home_btn.classList.remove("pink-button");
   document.getElementById("edit").style.display = "block";
 }
-function showContent() {
-  alert(
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  );
-}
-function addComment() {
-  prompt("Enter comment");
-}
+
 function confirmDialog() {
   let form = document.getElementById("form-blog");
   function handleForm(event) {
@@ -54,7 +49,7 @@ function confirmDialog() {
   newBlog.appendChild(blogAuthor);
   newBlog.addEventListener("click", blogClick);
   alert("Success!");
-  clickHome();
+  clickNav(home_btn);
 }
 
 function blogClick(e) {
@@ -73,7 +68,7 @@ function blogClick(e) {
     ele.children[0].innerHTML = formdata.get("new-blog-title");
     ele.children[1].innerHTML = formdata.get("new-blog-author");
     console.log(ele);
-    clickHome();
+    clickNav(home_btn);
     console.log(ele);
   }
   form.addEventListener("submit", handleEditForm);
@@ -81,16 +76,10 @@ function blogClick(e) {
     console.log(ele.id);
     console.log(ele.parentNode);
     ele.parentNode.removeChild(ele);
-    clickHome();
+    clickNav(home_btn);
   }
   let delButton = document.getElementById("delete-blog");
   if (delButton) {
     delButton.addEventListener("click", deleteBlog);
   }
 }
-
-newBlogList = document.getElementsByClassName("blog-li");
-// console.log(newBlogList[0]);
-// for (let i = 0; i < newBlogList.length; i++) {
-//   newBlogList[i].onclick = blogClick();
-// }

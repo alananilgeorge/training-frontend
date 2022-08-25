@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>Blog Page</title>
     <link rel="stylesheet" href="./assets/styles/create.css" />
-    <script src="./assets/scripts/create.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -16,12 +15,15 @@
             <nav>
               <ul class="navbar">
                 <li>
-                  <a class="pink-button" id="home-button" onclick="clickHome()"
+                  <a
+                    class="pink-button"
+                    id="home-button"
+                    onclick="clickNav(this)"
                     >Home</a
                   >
                 </li>
                 <li>
-                  <a class="btn" id="add-button" onclick="clickAdd()">
+                  <a class="btn" id="add-button" onclick="clickNav(this)">
                     New Blog
                   </a>
                 </li>
@@ -93,4 +95,5 @@
       </div>
     </div>
   </body>
+  <script src="./assets/scripts/create.js"></script>
 </html>
