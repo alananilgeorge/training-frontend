@@ -2,6 +2,7 @@ let selected = "";
 let liCount = 1;
 var createVar = document.getElementById("create");
 var homeVar = document.getElementById("home");
+var editVar = document.getElementById("edit");
 var home_btn = document.getElementById("home-button");
 var add_btn = document.getElementById("add-button");
 
@@ -12,12 +13,12 @@ function clickNav(btn) {
     createVar.style.display = "block";
     homeVar.style.display = "none";
     home_btn.classList.remove("pink-button");
-    document.getElementById("edit").style.display = "none";
+    editVar.style.display = "none";
   } else {
     createVar.style.display = "none";
     homeVar.style.display = "block";
     add_btn.classList.remove("pink-button");
-    document.getElementById("edit").style.display = "none";
+    editVar.style.display = "none";
   }
 }
 
@@ -26,7 +27,7 @@ function clickEdit() {
   homeVar.style.display = "none";
   add_btn.classList.remove("pink-button");
   home_btn.classList.remove("pink-button");
-  document.getElementById("edit").style.display = "block";
+  editVar.style.display = "block";
 }
 
 function confirmDialog() {
@@ -57,7 +58,6 @@ function blogClick(e) {
   console.log(ele);
   let blog_title = ele.children[0].innerHTML;
   let blog_author = ele.children[1].innerHTML;
-  console.log(blog_title, blog_author);
   document.getElementById("new-title").setAttribute("value", blog_title);
   document.getElementById("new-author-name").value = blog_author;
   clickEdit();
