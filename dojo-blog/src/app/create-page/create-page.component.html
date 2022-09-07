@@ -1,0 +1,32 @@
+<div class="content createpage" id="create">
+  <form (ngSubmit)="onSubmit()">
+    <h1>Add new blog</h1>
+    <div class="form-inside">
+      <label for="title">Blog Title: </label>
+      <input
+        type="text"
+        id="title"
+        name="blog-title"
+        [(ngModel)]="blog.title"
+      />
+      <label for="blog-body">Blog body:</label>
+      <textarea
+        name="blog-body"
+        id="blog-body"
+        cols="30"
+        rows="10"
+        [(ngModel)]="blog.body"
+      ></textarea>
+      <label for="blog-author">Blog Author:</label>
+      <select name="blog-author" id="blog-author" [(ngModel)]="blog.author">
+        <option value="rohan">Rohan</option>
+        <option value="cinta">Cinta</option>
+        <option value="afthab">Afthab</option>
+        <option value="damey">Damey</option>
+        <option value="jithin">Jithin</option>
+      </select>
+    </div>
+    <br />
+    <button type="submit" class="pink-button btn">Add blog</button>
+  </form>
+</div>

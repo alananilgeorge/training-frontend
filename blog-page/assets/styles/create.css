@@ -101,16 +101,6 @@ ul {
   list-style-type: none;
   text-align: left;
 }
-.pink-button {
-  background-color: #f1356d;
-  border: 2px solid #f1356d;
-  color: white;
-  border-radius: 15px;
-  size: 20px;
-  border: 0px;
-  height: 30px;
-  padding: 1px 6px 1px 6px;
-}
 
 .form-inside {
   color: #000000;

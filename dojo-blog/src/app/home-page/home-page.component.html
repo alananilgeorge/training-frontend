@@ -1,0 +1,15 @@
+<div class="content home" id="home">
+  <h2>All Blogs</h2>
+
+  <ul class="blog-list">
+    <a
+      class="blogs"
+      *ngFor="let blog of blogs"
+      routerLink="/edit/{{ this.blogservice.getId(blog) }}"
+    >
+      <p class="title">{{ blog.title }}</p>
+      <p class="body">{{ blog.body }}</p>
+      <p class="author">Written by - {{ blog.author }}</p>
+    </a>
+  </ul>
+</div>

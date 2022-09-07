@@ -1,0 +1,27 @@
+.navbar {
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar > li {
+  padding: 5px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.header-wrap {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(#a7a7a7, #a7a7a7);
+  background-size: 65% 2%;
+  background-repeat: no-repeat;
+  background-origin: bottom;
+  background-position: bottom;
+  padding-bottom: 1%;
+  margin-bottom: 12vh;
+}

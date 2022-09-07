@@ -1,0 +1,46 @@
+body {
+  color: #f1356d;
+  font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.content {
+  padding-left: 20%;
+  padding-right: 20%;
+  justify-content: center;
+}
+h2 {
+  color: #000;
+}
+.form-inside {
+  color: #000000;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  text-align: left;
+}
+.pink-button {
+  background-color: #f1356d;
+  border: 2px solid #f1356d;
+  color: white;
+  border-radius: 15px;
+  size: 20px;
+  border: 0px;
+  height: 30px;
+  padding: 1px 6px 1px 6px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+}
