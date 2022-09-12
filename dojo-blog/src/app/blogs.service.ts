@@ -25,7 +25,7 @@ export class BlogsService {
     blog.author = author;
   }
   delete(id: number) {
-    this.blogs = this.blogs.splice(id, 1);
+    this.blogs.splice(id, 1);
     console.log(this.blogs);
   }
 }
