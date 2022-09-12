@@ -1,7 +1,7 @@
 <div class="content home" id="home">
   <h2>All Blogs</h2>
 
-  <ul class="blog-list">
+  <ul class="blog-list" *ngIf="blogs.length > 0">
     <a
       class="blogs"
       *ngFor="let blog of blogs"

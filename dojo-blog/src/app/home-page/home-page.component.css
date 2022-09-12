@@ -7,4 +7,24 @@
 }
 .blog-list {
   text-align: left;
+  overflow-y: scroll;
+  height: 50vh;
+  border: 1px solid;
+  border-radius: 7px;
+  box-shadow: 2px 3px #989898;
+}
+
+.blog-list::-webkit-scrollbar {
+  width: 7px;
+}
+.blog-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.blog-list::-webkit-scrollbar-thumb {
+  background-color: #ef57856c;
+  border-radius: 10px;
+}
+.blog-list::-webkit-scrollbar-thumb:hover {
+  background-color: #ef5785;
+  border-radius: 10px;
 }
