@@ -1,5 +1,5 @@
 <div class="content createpage" id="create">
-  <form (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit()" ngNativeValidate>
     <h1>Add new blog</h1>
     <div class="form-inside">
       <label for="title">Blog Title: </label>
@@ -8,6 +8,7 @@
         id="title"
         name="blog-title"
         [(ngModel)]="blog.title"
+        required
       />
       <label for="blog-body">Blog body:</label>
       <textarea
