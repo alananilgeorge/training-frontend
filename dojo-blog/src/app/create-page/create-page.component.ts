@@ -10,7 +10,6 @@ import { BlogsService } from '../blogs.service';
 })
 export class CreatePageComponent implements OnInit {
   constructor(private blogservice: BlogsService, private router: Router) {}
-  blog: Blog = { title: '', body: '', author: '' };
 
   ngOnInit(): void {}
   onSubmit(data: any) {

@@ -31,7 +31,7 @@ export class EditPageComponent implements OnInit {
       data['body'],
       data['author']
     );
-    console.log(this.blogservice.blogs);
+    this.router.navigateByUrl('/');
   }
   delete() {
     this.blogservice.delete(this.id);
