@@ -22,14 +22,14 @@ export class EditPageComponent implements OnInit {
     this.blog = this.blogservice.get(this.id);
   }
 
-  onSave() {
+  onSave(data: any) {
     console.log(this.blogservice.blogs[this.id]);
 
     this.blogservice.edit(
       this.blogservice.blogs[this.id],
-      this.blog.title,
-      this.blog.body,
-      this.blog.author
+      data['title'],
+      data['body'],
+      data['author']
     );
     console.log(this.blogservice.blogs);
   }

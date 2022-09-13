@@ -13,9 +13,10 @@ export class CreatePageComponent implements OnInit {
   blog: Blog = { title: '', body: '', author: '' };
 
   ngOnInit(): void {}
-  onSubmit() {
-    console.log(this.blog);
-    this.blogservice.create(this.blog);
+  onSubmit(data: any) {
+    console.log(data);
+
+    this.blogservice.create(data);
     this.router.navigateByUrl('/');
   }
 }

@@ -1,8 +1,11 @@
 body {
   color: #f1356d;
   font-family: "Courier New", Courier, monospace;
-  box-sizing: border-box;
+
   text-align: center;
+}
+* {
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;

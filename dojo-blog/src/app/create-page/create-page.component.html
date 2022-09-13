@@ -1,25 +1,25 @@
 <div class="content createpage" id="create">
-  <form (ngSubmit)="onSubmit()" ngNativeValidate>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" ngNativeValidate>
     <h1>Add new blog</h1>
     <div class="form-inside">
       <label for="title">Blog Title: </label>
       <input
         type="text"
         id="title"
-        name="blog-title"
-        [(ngModel)]="blog.title"
+        name="title"
+        [ngModel]="blog.title"
         required
       />
-      <label for="blog-body">Blog body:</label>
+      <label for="body">Blog body:</label>
       <textarea
-        name="blog-body"
-        id="blog-body"
+        name="body"
+        id="body"
         cols="30"
         rows="10"
-        [(ngModel)]="blog.body"
+        [ngModel]="blog.body"
       ></textarea>
-      <label for="blog-author">Blog Author:</label>
-      <select name="blog-author" id="blog-author" [(ngModel)]="blog.author">
+      <label for="author">Blog Author:</label>
+      <select name="author" id="author" [ngModel]="blog.author">
         <option value="rohan">Rohan</option>
         <option value="cinta">Cinta</option>
         <option value="afthab">Afthab</option>
