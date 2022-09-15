@@ -1,0 +1,24 @@
+.match-list {
+  margin: 0;
+  list-style-type: none;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.league-title {
+  font-size: 10px;
+}
+.match {
+  margin: 0px 20% 20px 20%;
+
+  background-color: #675aa9a8;
+  color: #2c283c;
+}
+
+.match:hover {
+  background-color: #675aa9;
+  cursor: pointer;
+}
+.list-wrapper {
+  padding-top: 20px;
+  background-color: #312f3d;
+}

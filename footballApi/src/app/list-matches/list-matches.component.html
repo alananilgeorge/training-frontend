@@ -1,0 +1,20 @@
+<div class="list-wrapper">
+  <filter-tab></filter-tab>
+  <ul class="match-list">
+    <mat-card
+      class="match"
+      color="accent"
+      *ngFor="let match of this.matchService.viewMatches"
+      (click)="matchClick()"
+    >
+      <mat-card-header>
+        <mat-card-title class="league-title">{{
+          this.match.competition
+        }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="match-title">
+        {{ match.title }}</mat-card-content
+      >
+    </mat-card>
+  </ul>
+</div>
