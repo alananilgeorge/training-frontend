@@ -3,25 +3,42 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ViewMatchComponent } from './view-match/view-match.component';
+
 import { ListMatchesComponent } from './list-matches/list-matches.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterTabComponent } from './filter-tab/filter-tab.component';
+import { DatePipe } from '@angular/common';
+import { RelatedComponent } from './related/related.component';
+
+import { SanitizeUrlPipe } from './sanitize-url.pipe';
+import { SanitizeHtmlPipe } from './sanitize-html.pipe';
+import { ViewMatchComponent } from './view-match/view-match.component';
+
 @NgModule({
-  declarations: [AppComponent, ViewMatchComponent, ListMatchesComponent, FilterTabComponent],
+  declarations: [
+    AppComponent,
+    ListMatchesComponent,
+    FilterTabComponent,
+    RelatedComponent,
+    SanitizeHtmlPipe,
+    SanitizeUrlPipe,
+    ViewMatchComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     HttpClientModule,
+    MatButtonToggleModule,
     MatCardModule,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

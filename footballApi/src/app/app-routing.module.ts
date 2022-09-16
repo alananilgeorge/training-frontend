@@ -4,7 +4,11 @@ import { ListMatchesComponent } from './list-matches/list-matches.component';
 import { ViewMatchComponent } from './view-match/view-match.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: ListMatchesComponent },
+  {
+    path: '',
+    pathMatch: 'full',
+    component: ListMatchesComponent,
+  },
   { path: 'view-match/:id', component: ViewMatchComponent },
 ];
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatchApiService } from '../match-api.service';
 import { Router } from '@angular/router';
+import { Match } from '../match';
 @Component({
   selector: 'app-list-matches',
   templateUrl: './list-matches.component.html',
@@ -23,8 +24,8 @@ export class ListMatchesComponent implements OnInit {
   onClick() {
     console.log(this.matchService.allMatches);
   }
-  matchClick() {
-    this.router.navigateByUrl('/view-match/{{id}}');
+  matchClick(match: Match) {
+    this.router.navigateByUrl('/view-match/' + match.title);
   }
 }
 // this.matchService.allMatches.response.filter(

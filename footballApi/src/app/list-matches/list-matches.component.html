@@ -5,7 +5,7 @@
       class="match"
       color="accent"
       *ngFor="let match of this.matchService.viewMatches"
-      (click)="matchClick()"
+      (click)="matchClick(match)"
     >
       <mat-card-header>
         <mat-card-title class="league-title">{{

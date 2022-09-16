@@ -1,0 +1,23 @@
+.view-match-wrap {
+  height: 100%;
+  background-color: #353159;
+  padding-top: 80px;
+}
+
+.match-card-title {
+  font-size: 20px;
+}
+.match-content {
+  text-align: center;
+  justify-content: center;
+}
+.score {
+  display: flex;
+  margin: 0 10vw 0 10vw;
+  justify-content: space-around;
+}
+.match-card-related {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}

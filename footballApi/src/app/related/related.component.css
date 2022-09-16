@@ -1,0 +1,11 @@
+.related {
+  display: flex;
+  overflow-x: scroll;
+  background-color: #d95e5e;
+}
+.videos {
+  padding-right: 20px;
+}
+.subtitle {
+  text-align: center;
+}

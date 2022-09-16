@@ -1,23 +1,39 @@
-<div class="filter-wrap">
-  <button class="set-league btn" (click)="filterMatches('all')">
-    All Matches
-  </button>
-  <button
-    class="set-league btn"
-    (click)="filterMatches('ENGLAND: Premier League')"
-  >
-    Premier League
-  </button>
-  <button class="set-league btn" (click)="filterMatches('SPAIN: La Liga')">
-    La Liga
-  </button>
-  <button class="set-league btn" (click)="filterMatches('FRANCE: Ligue 1')">
-    Serie-A
-  </button>
-  <button class="set-league btn" (click)="filterMatches('GERMANY: Bundesliga')">
-    Ligue 1
-  </button>
-  <button class="set-league btn" (click)="filterMatches('FRANCE: Ligue 1')">
-    Bundesliga
-  </button>
+<div class="league-filter-wrap">
+  <mat-button-toggle-group class="btn-group">
+    <mat-button-toggle class="btn" (click)="filterMatches('all')">
+      All Matches
+    </mat-button-toggle>
+    <mat-button-toggle
+      class="btn"
+      (click)="filterMatches('ENGLAND: Premier League')"
+    >
+      Premier League
+    </mat-button-toggle>
+    <mat-button-toggle class="btn" (click)="filterMatches('SPAIN: La Liga')">
+      La Liga
+    </mat-button-toggle>
+    <mat-button-toggle class="btn" (click)="filterMatches('FRANCE: Ligue 1')">
+      Ligue 1
+    </mat-button-toggle>
+    <mat-button-toggle
+      class="btn"
+      (click)="filterMatches('GERMANY: Bundesliga')"
+    >
+      Bundesliga
+    </mat-button-toggle>
+    <mat-button-toggle class="btn" (click)="filterMatches('ITALY: Serie A')">
+      Serie-A
+    </mat-button-toggle>
+  </mat-button-toggle-group>
 </div>
+<!-- <div class="date-filter-wrap">
+  <mat-button-toggle class="btn" (click)="filteMatchesByDate()"
+    >Previous fixtures</mat-button-toggle
+  >
+  <mat-button-toggle class="btn" (click)="filteMatchesByDate()"
+    >Today's fixtures</mat-button-toggle
+  >
+  <mat-button-toggle class="btn" (click)="filteMatchesByDate()"
+    >Upcoming fixtures</mat-button-toggle
+  >
+</div> -->

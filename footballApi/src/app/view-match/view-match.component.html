@@ -1,1 +1,19 @@
-<p>view-match works!</p>
+<div class="view-match-wrap">
+  <mat-card class="match-card match-card-view">
+    <mat-card-title class="match-card-title">{{
+      this.match.competition
+    }}</mat-card-title>
+    <mat-card-subtitle>{{
+      this.match.date | date: "medium"
+    }}</mat-card-subtitle>
+    <mat-card-content class="match-content"
+      ><div class="score">
+        <div>{{ this.teams[0] }}</div>
+        <div>-</div>
+        <div>{{ this.teams[1] }}</div>
+      </div></mat-card-content
+    >
+  </mat-card>
+  <br />
+  <app-related [match]="match"></app-related>
+</div>

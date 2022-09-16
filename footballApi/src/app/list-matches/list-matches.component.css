@@ -9,9 +9,8 @@
 }
 .match {
   margin: 0px 20% 20px 20%;
-
-  background-color: #675aa9a8;
-  color: #2c283c;
+  color: #dcdcdc;
+  background-color: #4e4a74;
 }
 
 .match:hover {
@@ -20,5 +19,5 @@
 }
 .list-wrapper {
   padding-top: 20px;
-  background-color: #312f3d;
+  background-color: #353159;
 }

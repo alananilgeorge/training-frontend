@@ -2,7 +2,7 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
   color: #fff;
 }
 body {
@@ -12,7 +12,23 @@ body {
 
 .btn:hover {
   cursor: pointer;
+  background-color: #25233d;
+}
+.btn :focus {
+  background-color: #25233d;
 }
 .btn {
-  background-color: #dfdeff;
+  color: rgb(255, 255, 234);
+  background-color: #353159;
+}
+.btn-group {
+  border: 0;
+}
+.match-card {
+  margin: 0 20% 0 20%;
+  background-color: #db7373;
+}
+.match-card-view {
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr;
 }
