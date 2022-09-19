@@ -3,7 +3,12 @@
   background-color: #fceded;
   padding-top: 80px;
 }
-
+mat-card {
+  color: #000;
+}
+mat-card-subtitle {
+  color: #000;
+}
 .match-card-title {
   font-size: 20px;
 }
