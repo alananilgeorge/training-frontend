@@ -38,7 +38,7 @@ import { ViewMatchComponent } from './view-match/view-match.component';
     MatButtonToggleModule,
     MatCardModule,
   ],
-  providers: [DatePipe],
+  providers: [DatePipe, SanitizeHtmlPipe, SanitizeUrlPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

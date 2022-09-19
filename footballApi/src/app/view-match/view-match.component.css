@@ -1,6 +1,6 @@
 .view-match-wrap {
-  height: 100%;
-  background-color: #353159;
+  height: calc(100% - 64px);
+  background-color: #fceded;
   padding-top: 80px;
 }
 

@@ -1,11 +1,7 @@
 <mat-card class="match-card">
   <h2 class="title">Related Videos</h2>
   <mat-card class="match-card related">
-    <div
-      class="videos"
-      *ngFor="let video of this.match.videos"
-      (click)="viewVideo(video.id)"
-    >
+    <div class="videos" *ngFor="let video of this.match.videos">
       <div [innerHtml]="video.embed | sanitizeUrl | sanitizeHtml"></div>
       <div class="subtitle">{{ video.title }}</div>
     </div>

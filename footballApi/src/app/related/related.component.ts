@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Match } from '../match';
 import { MatchApiService } from '../match-api.service';
+import { SanitizeHtmlPipe } from '../sanitize-html.pipe';
+import { SanitizeUrlPipe } from '../sanitize-url.pipe';
 import { Video } from '../video';
 
 @Component({
@@ -10,10 +12,20 @@ import { Video } from '../video';
   styleUrls: ['./related.component.css'],
 })
 export class RelatedComponent implements OnInit {
-  constructor(private matchService: MatchApiService, private router: Router) {}
+  constructor(
+    private matchService: MatchApiService,
+    private router: Router,
+    private htmlSanitizer: SanitizeHtmlPipe,
+    private urlSanitizer: SanitizeUrlPipe
+  ) {}
   @Input() match!: Match;
-  viewVideo(id: string) {
-    this.router.navigateByUrl('view-video/{{id}}');
+  videos: any[] = [];
+  ngOnInit(): void {
+    this.match.videos.forEach((video) => {
+      this.videos.push(
+        this.urlSanitizer.transform(this.htmlSanitizer.transform(video.embed))
+      );
+    });
+    console.log(this.videos, this.match.videos);
   }
-  ngOnInit(): void {}
 }

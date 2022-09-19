@@ -12,23 +12,28 @@ body {
 
 .btn:hover {
   cursor: pointer;
-  background-color: #25233d;
+  background-color: #d3a7a7;
 }
-.btn :focus {
-  background-color: #25233d;
-}
+
+/* .btn :focus {
+  background-color: #ae1e1e;
+  color: #fff;
+} */
 .btn {
-  color: rgb(255, 255, 234);
-  background-color: #353159;
+  color: #232323;
+  background-color: #ffecec;
 }
 .btn-group {
   border: 0;
 }
 .match-card {
   margin: 0 20% 0 20%;
-  background-color: #db7373;
+  background-color: #ffffff;
 }
 .match-card-view {
   display: grid;
   grid-template-rows: 1fr 1fr 3fr;
+}
+* {
+  box-sizing: border-box;
 }

@@ -1,11 +1,27 @@
 .related {
   display: flex;
-  overflow-x: scroll;
-  background-color: #d95e5e;
+  overflow-x: auto;
+  background-color: #e8e8e8;
+  color: #000;
 }
 .videos {
   padding-right: 20px;
 }
 .subtitle {
   text-align: center;
+}
+
+.related::-webkit-scrollbar {
+  background-color: #bdbdbd00;
+
+  height: 10px;
+}
+.related::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+.related::-webkit-scrollbar-track {
+  background-color: #878787;
+}
+.title {
+  color: #000;
 }

@@ -1,23 +1,23 @@
 .match-list {
   margin: 0;
   list-style-type: none;
-  height: 100vh;
+  height: calc(100vh - 132px);
   overflow-y: scroll;
 }
 .league-title {
   font-size: 10px;
 }
 .match {
-  margin: 0px 20% 20px 20%;
-  color: #dcdcdc;
-  background-color: #4e4a74;
+  margin: 20px 20% 20px 20%;
+  color: #ffeeee;
+  background-color: #bf3030d8;
 }
 
 .match:hover {
-  background-color: #675aa9;
+  background-color: #bf3030;
   cursor: pointer;
 }
 .list-wrapper {
   padding-top: 20px;
-  background-color: #353159;
+  background-color: #fceded;
 }
