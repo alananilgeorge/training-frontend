@@ -15,15 +15,10 @@ export class ListMatchesComponent implements OnInit {
     this.matchService.getData().subscribe((data) => {
       this.matchService.allMatches = data;
       this.matchService.viewMatches = this.matchService.allMatches.response;
+      console.log(typeof data.response[0].date);
     });
   }
   ngOnInit(): void {}
-  getMatches() {
-    console.log(this.matchService.allMatches.response);
-  }
-  onClick() {
-    console.log(this.matchService.allMatches);
-  }
   matchClick(match: Match) {
     this.router.navigateByUrl('/view-match/' + match.title);
   }

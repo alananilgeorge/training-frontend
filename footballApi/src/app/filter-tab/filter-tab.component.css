@@ -1,4 +1,4 @@
-.league-filter-wrap {
+.filter-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +12,15 @@
   border: 0;
 }
 .mat-button-toggle-checked {
-  background-color: #ae1e1e;
+  background-color: #d22424;
   color: #fff;
+}
+.filter {
+  background-color: #d22424;
+  color: #fff;
+}
+.btn-wrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }

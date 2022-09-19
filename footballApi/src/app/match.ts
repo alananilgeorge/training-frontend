@@ -5,6 +5,6 @@ export interface Match {
   matchviewUrl: string;
   competitionUrl: string;
   thumbnail: string;
-  date: Date;
+  date: string;
   videos: Video[];
 }

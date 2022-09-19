@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { RelatedComponent } from './related/related.component';
 import { SanitizeUrlPipe } from './sanitize-url.pipe';
 import { SanitizeHtmlPipe } from './sanitize-html.pipe';
 import { ViewMatchComponent } from './view-match/view-match.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,9 @@ import { ViewMatchComponent } from './view-match/view-match.component';
     HttpClientModule,
     MatButtonToggleModule,
     MatCardModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatButtonModule,
   ],
   providers: [DatePipe, SanitizeHtmlPipe, SanitizeUrlPipe],
   bootstrap: [AppComponent],

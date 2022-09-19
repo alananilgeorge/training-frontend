@@ -1,39 +1,47 @@
-<div class="league-filter-wrap">
-  <mat-button-toggle-group class="btn-group">
-    <mat-button-toggle class="btn" (click)="filterMatches('all')">
-      All Matches
-    </mat-button-toggle>
-    <mat-button-toggle
-      class="btn"
-      (click)="filterMatches('ENGLAND: Premier League')"
-    >
+<div class="filter-wrap">
+  <mat-button-toggle-group
+    class="btn-group"
+    ngDefaultControl
+    [formControl]="leagueFilter"
+  >
+    <mat-button-toggle class="btn" value="all"> All Matches </mat-button-toggle>
+    <mat-button-toggle class="btn" value="ENGLAND: Premier League">
       Premier League
     </mat-button-toggle>
-    <mat-button-toggle class="btn" (click)="filterMatches('SPAIN: La Liga')">
+    <mat-button-toggle class="btn" value="SPAIN: La Liga">
       La Liga
     </mat-button-toggle>
-    <mat-button-toggle class="btn" (click)="filterMatches('FRANCE: Ligue 1')">
+    <mat-button-toggle class="btn" value="FRANCE: Ligue 1">
       Ligue 1
     </mat-button-toggle>
-    <mat-button-toggle
-      class="btn"
-      (click)="filterMatches('GERMANY: Bundesliga')"
-    >
+    <mat-button-toggle class="btn" value="GERMANY: Bundesliga">
       Bundesliga
     </mat-button-toggle>
-    <mat-button-toggle class="btn" (click)="filterMatches('ITALY: Serie A')">
+    <mat-button-toggle class="btn" value="ITALY: Serie A">
       Serie-A
     </mat-button-toggle>
   </mat-button-toggle-group>
 </div>
-<!-- <div class="date-filter-wrap">
-  <mat-button-toggle class="btn" (click)="filteMatchesByDate()"
-    >Previous fixtures</mat-button-toggle
+<br />
+<div class="filter-wrap">
+  <mat-button-toggle-group
+    class="btn-group"
+    ngDefaultControl
+    [formControl]="dateFilter"
   >
-  <mat-button-toggle class="btn" (click)="filteMatchesByDate()"
-    >Today's fixtures</mat-button-toggle
-  >
-  <mat-button-toggle class="btn" (click)="filteMatchesByDate()"
-    >Upcoming fixtures</mat-button-toggle
-  >
-</div> -->
+    <mat-button-toggle class="btn" value="1"
+      >Previous fixtures</mat-button-toggle
+    >
+    <mat-button-toggle class="btn" value="2"
+      >Today's fixtures</mat-button-toggle
+    >
+    <mat-button-toggle class="btn" value="3"
+      >Upcoming fixtures</mat-button-toggle
+    >
+  </mat-button-toggle-group>
+</div>
+<div class="btn-wrap">
+  <button mat-raised-button class="btn filter" (click)="filter()">
+    Filter matches
+  </button>
+</div>

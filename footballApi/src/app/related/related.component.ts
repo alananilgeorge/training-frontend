@@ -5,7 +5,7 @@ import { MatchApiService } from '../match-api.service';
 import { SanitizeHtmlPipe } from '../sanitize-html.pipe';
 import { SanitizeUrlPipe } from '../sanitize-url.pipe';
 import { Video } from '../video';
-
+import { SafeHtml } from '@angular/platform-browser';
 @Component({
   selector: 'app-related',
   templateUrl: './related.component.html',
@@ -23,9 +23,11 @@ export class RelatedComponent implements OnInit {
   ngOnInit(): void {
     this.match.videos.forEach((video) => {
       this.videos.push(
-        this.urlSanitizer.transform(this.htmlSanitizer.transform(video.embed))
+        this.htmlSanitizer.transform(this.urlSanitizer.transform(video.embed))
       );
     });
-    console.log(this.videos, this.match.videos);
+  }
+  returnUrl() {
+    return this.videos;
   }
 }
