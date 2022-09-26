@@ -1,0 +1,26 @@
+this.leagueFilter.valueChanges.subscribe((league) => {
+      if ((league = 'all')) {
+        this.matchApi.viewMatches = this.matchApi.allMatches.response;
+      } else {
+        this.matchApi.viewMatches = this.matchApi.allMatches.response.filter(
+          (match) => match.competition == league
+        );
+      }
+    });
+    this.dateFilter.valueChanges.subscribe((_date) => {
+      if (_date == '1') {
+        this.matchApi.viewMatches = this.matchApi.viewMatches.filter(
+          (match) => match.date < this.date.toISOString()
+        );
+      }
+      if (_date == '2') {
+        this.matchApi.viewMatches = this.matchApi.viewMatches.filter(
+          (match) =>
+            match.date.slice(0, 10) == this.date.toISOString().slice(0, 10)
+        );
+      }
+      if (_date == '3') {
+        this.matchApi.viewMatches = this.matchApi.viewMatches.filter(
+          (match) => match.date > this.date.toISOString()
+        );
+      }
